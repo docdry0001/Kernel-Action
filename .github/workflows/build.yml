@@ -11,12 +11,12 @@ jobs:
       - name: Build OnePlus 11R Kernel
         uses: Fyg369/Kernel-Action@main
         with:
-          # OnePlus 11R-ի kernel-ի աղբյուրի կոդը (SM8475 / waipio)
+          # OnePlus 11R-ի kernel-ի աղբյուր (SM8475 / waipio)
           kernel-url: https://github.com/OnePlusOSS/android_kernel_oneplus_sm8475
           kernel-branch: oneplus/sm8475_s_16.0.0_oneplus11r
           kernel-dir: kernel_platform/msm-kernel
           
-          # Vendor kernel աղբյուրը (OnePlus-ի համար անհրաժեշտ է)
+          # Vendor աղբյուր (OnePlus-ի համար անհրաժեշտ է)
           vendor: true
           vendor-url: https://github.com/OnePlusOSS/android_vendor_oneplus_sm8475
           vendor-branch: oneplus/sm8475_s_16.0.0_oneplus11r
@@ -26,23 +26,20 @@ jobs:
           config: vendor/oneplus11r_defconfig
           arch: arm64
           
-          # Android տարբերակը (15 = OxygenOS 16-ի համար)
+          # Android տարբերակ (15 = OxygenOS 16)
           android-version: 15
           
-          # Միացնել KernelSU Next-ը
+          # KernelSU Next
           ksu: true
           ksu-version: main
           
-          # Միացնել NetHunter-ը
+          # NetHunter (monitor mode, packet injection)
           nethunter: true
           nethunter-patch: true
           
-          # Միացնել LXC/Docker աջակցությունը
+          # LXC/Docker աջակցություն
           lxc: true
           lxc-patch: true
-          
-          # Միացնել SUSFS-ը (root hiding)
-          susfs: true
           
           # Փաթեթավորում AnyKernel3-ով
           anykernel3: true
