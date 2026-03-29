@@ -27,7 +27,7 @@ jobs:
           arch: arm64
           
           # Android տարբերակ (15 = OxygenOS 16)
-          android-version: 15
+          android-version: 16
           
           # KernelSU Next
           ksu: true
